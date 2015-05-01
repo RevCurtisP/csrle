@@ -43,13 +43,13 @@ clean:	tidy
 
 install:	$(EXES) $(DOCS)
 	install -m 755 -o root $(EXES) $(INSTALLDIR)/bin
-	install -m 644 -o root $(MAN1) $(INSTALLDIR)/man
+	install -m 644 -o root $(MAN1) $(INSTALLDIR)/man/man1
 
 
 dist:
 	rm -rf $(DISTNAME)
 	mkdir $(DISTNAME)
 	cp $(DISTFILES) $(DISTNAME)
-	tar zchf $(DISTNAME).tar.gz $(DISTNAME)
+	tar zchf $(DISTNAME).tar.gz $(DISTNAME)  
 	rm -rf $(DISTNAME)
 	
