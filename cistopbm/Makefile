@@ -1,7 +1,7 @@
 INSTALLDIR = /usr/local
 CC = gcc
 CFLAGS = -O2 -Wall -ansi -pedantic
-LIBS = -lpbm
+LIBS = -lnetpbm
 
 #
 # Below this point, should not need changing
