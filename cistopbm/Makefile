@@ -2,6 +2,7 @@ INSTALLDIR = /usr/local
 CC = gcc
 CFLAGS = -O2 -Wall -ansi -pedantic
 LIBS = -lnetpbm
+MANDIR = 
 
 #
 # Below this point, should not need changing
@@ -42,7 +43,7 @@ clean:	tidy
 
 install:	$(EXES) $(DOCS)
 	install -m 755 -o root $(EXES) $(INSTALLDIR)/bin
-	install -m 644 -o root $(MAN1) $(INSTALLDIR)/man/man1
+	install -m 644 -o root $(MAN1) $(INSTALLDIR)/man
 
 
 dist:
