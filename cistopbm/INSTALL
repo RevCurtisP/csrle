@@ -1,0 +1,21 @@
+Program installation
+====================
+
+1. Edit Makefile and check that the C compiler, install directory etc. are
+  correct (they're currently for a Mandrake Linux 10.0 system).
+
+2. Build with
+
+	make
+
+3. Become 'root', and
+
+	make install
+
+Additional files
+================
+
+* cis.magic - this file should be added to the end of your "magic" 
+  file (often called /usr/share/magic or /etc/magic). You may then 
+  need to rebuild it with 'file -C'.
+

@@ -1,0 +1,28 @@
+.TH cistopbm 1 "5 July 2009"
+.IX cistopbm
+.SH NAME
+cistopbm - convert a CompuServe RLE file into a portable bitmap
+.SH SYNOPSIS
+.B cistopbm
+.RB [ -i ][ -p ][ -- ]
+.I [ cisfile [ outfile ]]
+.SH DESCRIPTION
+Reads a CompuServe RLE file as input.
+Reads from stdin if input file is omitted.
+Produces a portable bitmap as output.
+.SH OPTIONS
+.TP
+.B -i
+Inverse: Reverse the mapping of foreground/background to black/white.
+.TP
+.B -p
+Output in plain (ASCII) format rather than binary.
+.TP
+.B --
+End of options (use this if the filename starts with "-")
+.SH "SEE ALSO"
+pbmtocis(1), pbm(5)
+.SH AUTHOR
+Copyright (C) 2009 John Elliott <jce@seasip.demon.co.uk>.
+.\" Copying policy: GNU GPL version 2 or later
+

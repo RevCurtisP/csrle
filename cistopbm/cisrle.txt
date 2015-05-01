@@ -1,0 +1,30 @@
+CompuServe RLE file format:
+
+  The file format supports two fixed sizes. The first three bytes are the magic
+number and give the size:
+
+0x1B 0x47 0x48	(ESC GH): 256 x 192
+0x1B 0x47 0x4D	(ESC GM): 128 x 96
+
+  Note that some files have junk leading bytes before the magic number, so 
+when parsing this file it's a good idea to skip bytes until the signature is
+found.
+
+  There then follow a number of byte pairs. The first byte in each pair gives
+a count of background pixels plus 0x20; the second, a count of foreground 
+pixels plus 0x20. So
+
+	0x25 0x21
+
+expands as five background pixels followed by one foreground pixel.
+
+  By convention runs are no longer than 0x5E bytes, so that the byte 
+representing them remains in the printable ASCII range 0x20-0x7E.
+
+  Characters in the 0x00-0x1F range should be ignored, except for the sequence
+0x1B 0x47 0x4E (ESC GN) which ends the image. Note that not all images 'in the
+wild' have a valid end-image sequence, so it is also necessary to keep count 
+of the number of pixels drawn and stop when the correct number (128x96 or 
+256x192) is reached.
+ 
+  

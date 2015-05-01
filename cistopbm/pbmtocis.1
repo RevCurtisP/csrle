@@ -1,0 +1,29 @@
+.TH pbmtocis 1 "5 July 2009"
+.IX pbmtocis
+.SH NAME
+pbmtocis - convert a portable bitmap to a CompuServe RLE image
+.SH SYNOPSIS
+.B pbmtocis
+.RB [ -i ][ -w ][ -- ]
+.I [ cisfile [ outfile ]]
+.SH DESCRIPTION
+Reads a CompuServe RLE file as input.
+Reads from stdin if input file is omitted.
+Produces a portable bitmap as output.
+.SH OPTIONS
+.TP
+.B -i
+Inverse: Reverse the mapping of foreground/background to black/white.
+.TP
+.B -w
+If the input image is smaller than the fixed size of the output image, pad 
+with white pixels rather than black.
+.TP
+.B --
+End of options (use this if the filename starts with "-")
+.SH "SEE ALSO"
+cistopbm(1), pbm(5)
+.SH AUTHOR
+Copyright (C) 2009 John Elliott <jce@seasip.demon.co.uk>.
+.\" Copying policy: GNU GPL version 2 or later
+
