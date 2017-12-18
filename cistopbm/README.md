@@ -1,4 +1,4 @@
-##cistopbm
+# cistopbm
 
 Source code for netpbm utilities *cistopbm* and *pdmtocis* version 1.0.1
 
